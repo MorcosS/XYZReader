@@ -7,6 +7,9 @@
     android:fitsSystemWindows="true"
     tools:context="com.example.xyzreader.ui.ArticleDetailActivity">
 
+    <include layout="@layout/fragment_article_detail" />
+
+
     <android.support.design.widget.AppBarLayout
         android:id="@+id/app_bar"
         android:layout_width="match_parent"
@@ -21,9 +24,10 @@
             android:fitsSystemWindows="true"
             app:contentScrim="?attr/colorPrimary"
             app:layout_scrollFlags="scroll|exitUntilCollapsed">
-<FrameLayout
+<LinearLayout
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:orientation="vertical">
     <ImageView
                 android:id="@+id/photo"
                 android:layout_width="match_parent"
@@ -38,7 +42,7 @@
                     android:background="@drawable/scrim">
 
                 </View>
-</FrameLayout>
+</LinearLayout>
 
             <android.support.v7.widget.Toolbar
                 android:id="@+id/toolbar"
@@ -54,7 +58,7 @@
 
     <android.support.design.widget.FloatingActionButton
         android:id="@+id/share_fab"
-        app:pressedTranslationZ="12dp"
+        app:pressedTranslationZ="6dp"
         app:elevation="6dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -62,7 +66,5 @@
         app:layout_anchor="@id/app_bar"
         app:layout_anchorGravity="bottom|end"
         app:srcCompat="@android:drawable/ic_menu_share" />
-    <include layout="@layout/fragment_article_detail" />
-
 
 </android.support.design.widget.CoordinatorLayout>
